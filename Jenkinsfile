@@ -61,7 +61,7 @@ pipeline{
                 withCredentials([usernamePassword(credentialsId: 'DOCKER_CREDS', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]){
                     sh """
                     docker login  --username $USERNAME --password $PASSWORD && \
-                    docker push livermakol/${BRANCH_NAME}/default_image:latest
+                    docker push hervlokossou/${BRANCH_NAME}/default_image:latest
                     """
                 }
             }
